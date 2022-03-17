@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/chronus/static/css/main.073c9b0a.css",
-    "main.js": "/chronus/static/js/main.c33a1f38.js",
+    "main.js": "/chronus/static/js/main.6cf58cab.js",
     "static/js/787.ddacb351.chunk.js": "/chronus/static/js/787.ddacb351.chunk.js",
     "static/media/logo.svg": "/chronus/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/chronus/index.html",
     "main.073c9b0a.css.map": "/chronus/static/css/main.073c9b0a.css.map",
-    "main.c33a1f38.js.map": "/chronus/static/js/main.c33a1f38.js.map",
+    "main.6cf58cab.js.map": "/chronus/static/js/main.6cf58cab.js.map",
     "787.ddacb351.chunk.js.map": "/chronus/static/js/787.ddacb351.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.c33a1f38.js"
+    "static/js/main.6cf58cab.js"
   ]
 }
