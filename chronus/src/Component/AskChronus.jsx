@@ -2,7 +2,28 @@ import React, { Component } from "react";
 
 class AskChronus extends Component {
   render() {
-    return <div></div>;
+    console.log("ASK chronus");
+    return (
+      <div>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+      </div>
+    );
   }
 }
 export default AskChronus;

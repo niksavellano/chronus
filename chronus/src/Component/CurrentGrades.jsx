@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class CurrentGrades extends Component {
   render() {
-    return <div></div>;
+    return <div>grades</div>;
   }
 }
 export default CurrentGrades;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class TuitionBalance extends Component {
   render() {
-    return <div></div>;
+    return <div>tbalance</div>;
   }
 }
 export default TuitionBalance;

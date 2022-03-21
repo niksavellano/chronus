@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import titan from "../pics/Titan.png";
+
 import "./css/Index.css";
 
-import firebase from "firebase";
-import { firebaseApp } from "./Config";
-
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 import AskChronus from "./AskChronus";
 import TytanaNewsfeed from "./TytanaNewsfeed";
@@ -21,14 +19,19 @@ import Faqs from "./FAQS";
 import ContactUs from "./ContactUs";
 import About from "./About";
 import NavBar from "./Navigation";
+import Heading from "./Heading";
 
-firebaseApp();
+import firebaseConfig from "./Config";
+import firebase from "firebase/compat/app";
+
+firebase.initializeApp(firebaseConfig);
 
 class Index extends Component {
   state = { isSignedIn: false };
 
   componentDidMount = () => {
-    firebase.auth().onAuthStateChanged((user) => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
       this.setState({ isSignedIn: !!user });
     });
   };
@@ -38,7 +41,7 @@ class Index extends Component {
         {this.state.isSignedIn ? (
           <div>
             <NavBar />
-            <Switch>
+            <Routes>
               <Route exact path="/" component={AskChronus} />
               <Route path="/newsfeed" component={TytanaNewsfeed} />
               <Route path="/grades" component={CurrentGrades} />
@@ -52,37 +55,10 @@ class Index extends Component {
               <Route path="/faq" component={Faqs} />
               <Route path="/contact" component={ContactUs} />
               <Route path="/about" component={About} />
-            </Switch>
+            </Routes>
           </div>
         ) : (
-          <div className="container">
-            <img src={titan} alt="" className="titan" />
-            <div className="form-floating mb-3">
-              <input
-                type="email"
-                className="form-control"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label for="floatingInput">Email</label>
-            </div>
-            <div class="form-floating">
-              <input
-                type="password"
-                class="form-control"
-                id="floatingPassword"
-                placeholder="Password"
-              />
-              <label for="floatingPassword">Password</label>
-            </div>
-            <button type="button" class="btn btn-success">
-              Login
-            </button>
-            <br />
-            <button type="button" class="btn btn-success">
-              Guest
-            </button>
-          </div>
+          <Heading />
         )}
       </div>
     );

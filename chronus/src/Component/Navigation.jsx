@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import { getAuth, signOut } from "firebase/auth";
 
-import firebase from "firebase";
-import Link from "./MyLink";
+import MyLink from "./MyLink";
 
 class NavBar extends Component {
   state = {
@@ -25,7 +25,8 @@ class NavBar extends Component {
         to: "/",
         exact: false,
         onClick: () => {
-          firebase.auth().signOut();
+          const auth = getAuth();
+          signOut(auth);
           alert("Signed out!");
         },
       },
@@ -51,7 +52,7 @@ class NavBar extends Component {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               {this.state.menuItems.map((menuItem) => (
-                <Link
+                <MyLink
                   key={menuItem.key}
                   text={menuItem.title}
                   to={menuItem.to}
