@@ -2,7 +2,11 @@ import React, { Component } from "react";
 
 class Deficiency extends Component {
   render() {
-    return <div>def</div>;
+    return (
+      <div>
+        <p>hello</p>
+      </div>
+    );
   }
 }
 export default Deficiency;

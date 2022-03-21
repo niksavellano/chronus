@@ -42,19 +42,19 @@ class Index extends Component {
           <div>
             <NavBar />
             <Routes>
-              <Route exact path="/" component={AskChronus} />
-              <Route path="/newsfeed" component={TytanaNewsfeed} />
-              <Route path="/grades" component={CurrentGrades} />
-              <Route path="/schedule" component={ClassSchedule} />
-              <Route path="/records" component={ScholasticRecords} />
-              <Route path="/balance" component={TuitionBalance} />
-              <Route path="/deficiency" component={Deficiency} />
-              <Route path="/calculate" component={CalculateGrade} />
-              <Route path="/allowance" component={ManageAllowance} />
-              <Route path="/floorplan" component={MTCFloorPlan} />
-              <Route path="/faq" component={Faqs} />
-              <Route path="/contact" component={ContactUs} />
-              <Route path="/about" component={About} />
+              <Route exact path="/" element={<AskChronus />} />
+              <Route path="/newsfeed" element={<TytanaNewsfeed />} />
+              <Route path="/grades" element={<CurrentGrades />} />
+              <Route path="/schedule" element={<ClassSchedule />} />
+              <Route path="/records" element={<ScholasticRecords />} />
+              <Route path="/balance" element={<TuitionBalance />} />
+              <Route path="/defeciency" element={<Deficiency />} />
+              <Route path="/calculate" element={<CalculateGrade />} />
+              <Route path="/allowance" element={<ManageAllowance />} />
+              <Route path="/floorplan" element={<MTCFloorPlan />} />
+              <Route path="/faq" element={<Faqs />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </div>
         ) : (
