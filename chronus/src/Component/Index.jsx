@@ -2,6 +2,26 @@ import React, { Component } from "react";
 import titan from "../pics/Titan.png";
 import "./css/Index.css";
 
+import firebase from "firebase";
+import { firebaseConfig } from "./Config";
+
+import { Route, Switch } from "react-router-dom";
+
+import AskChronus from "./AskChronus";
+import TytanaNewsfeed from "./TytanaNewsfeed";
+import CurrentGrades from "./CurrentGrades";
+import ClassSchedule from "./ClassSchedule";
+import ScholasticRecords from "./ScholasticRecords";
+import TuitionBalance from "./TuitionBalance";
+import Deficiency from "./Deficiency";
+import CalculateGrade from "./CalculateGrade";
+import ManageAllowance from "./ManageAllowance";
+import MTCFloorPlan from "./MTCFloorPlan";
+import Faqs from "./FAQS";
+import About from "./About";
+
+firebase.initializeApp(firebaseConfig);
+
 class Index extends Component {
   render() {
     return (
